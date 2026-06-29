@@ -3,12 +3,60 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { Greet } from './components/Greet'
+import { Person } from './components/Person'
+import { PersonList } from './components/PersonList'
+import { Status } from './components/Status'
+import { Heading } from './components/Heading'
+import { Oscar } from './components/Oscar'
+import { Button } from './components/Button'
+import { Input } from './components/Input'
+import { Container } from './components/Container'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const personNmae = {
+    first: 'Bruce',
+    last: 'Wayne',
+  }
+  const nameList = [
+    {
+      first: 'Bruce',
+      last: 'Wayne',
+    },
+    {
+      first: 'Clark',
+      last: 'Kent',
+    },
+    {
+      first: 'Princess',
+      last: 'Diana',
+    },
+  ]
   return (
     <>
+      <div className='App'>
+        <Greet name='Vishwas' messageCount={20} isLoggedIn={true} />
+        <Person name={personNmae}/>
+        <PersonList names={nameList} />
+        <Status status='success' />
+        <Heading>Placeholder text</Heading>
+        <Oscar>
+          <Heading>
+            Oscar goes to Leonardo Dicpario
+          </Heading>
+        </Oscar>
+        <Greet name='Vishwas' isLoggedIn={true} />
+        <Button handleClick={(event, id) => {
+            console.log('Button clicked', event, id)
+          }}
+        />
+        <Input
+          value=''
+          handleChange={(event) => { console.log(event) }} 
+        />
+        <Container styles={{ border: '1px solid black', padding: '1rem'}} />
+      </div>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
