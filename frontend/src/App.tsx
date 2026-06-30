@@ -20,6 +20,8 @@ import { User } from './components/context/User'
 import { DomRef } from './components/ref/DomRef'
 import { MutableRef } from './components/ref/MutableRef'
 import { CounterClassLegacy } from './components/class/Counter'
+import { Private } from './components/auth/Private'
+import { Profile } from './components/auth/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -74,6 +76,7 @@ function App() {
         <DomRef />
         <MutableRef />
         <CounterClassLegacy message="The count value is " />
+        <Private isLoggedIn={true} component={Profile} />
       </div>
       <section id="center">
         <div className="hero">
