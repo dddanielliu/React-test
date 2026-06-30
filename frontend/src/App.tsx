@@ -24,6 +24,7 @@ import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
 import { List } from './components/generics/List'
 import { RandomNumber } from './components/restriction/RendomNumber'
+import { Toast } from './components/templateliterals/Toast'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -108,6 +109,7 @@ function App() {
           onClick={(item) => console.log(item)}
         />
         <RandomNumber value={10} isPositive />
+        <Toast position='left-center' />
       </div>
       <section id="center">
         <div className="hero">
