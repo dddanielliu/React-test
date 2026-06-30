@@ -13,6 +13,8 @@ import { Button } from './components/Button'
 import { Input } from './components/Input'
 import { Container } from './components/Container'
 import { Counter } from './components/state/Counter'
+import { Box } from './components/context/Box'
+import { ThemeContextProvider } from './components/context/ThemeContext'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -58,6 +60,9 @@ function App() {
         />
         <Container styles={{ border: '1px solid black', padding: '1rem'}} />
         <Counter />
+        <ThemeContextProvider>
+          <Box />
+        </ThemeContextProvider>
       </div>
       <section id="center">
         <div className="hero">
