@@ -15,6 +15,8 @@ import { Container } from './components/Container'
 import { Counter } from './components/state/Counter'
 import { Box } from './components/context/Box'
 import { ThemeContextProvider } from './components/context/ThemeContext'
+import { UserContextProvider } from './components/context/UserContext'
+import { User } from './components/context/User'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -63,6 +65,9 @@ function App() {
         <ThemeContextProvider>
           <Box />
         </ThemeContextProvider>
+        <UserContextProvider>
+          <User />
+        </UserContextProvider>
       </div>
       <section id="center">
         <div className="hero">
