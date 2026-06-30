@@ -17,6 +17,8 @@ import { Box } from './components/context/Box'
 import { ThemeContextProvider } from './components/context/ThemeContext'
 import { UserContextProvider } from './components/context/UserContext'
 import { User } from './components/context/User'
+import { DomRef } from './components/ref/DomRef'
+import { MutableRef } from './components/ref/MutableRef'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -68,6 +70,8 @@ function App() {
         <UserContextProvider>
           <User />
         </UserContextProvider>
+        <DomRef />
+        <MutableRef />
       </div>
       <section id="center">
         <div className="hero">
