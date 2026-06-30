@@ -19,6 +19,7 @@ import { UserContextProvider } from './components/context/UserContext'
 import { User } from './components/context/User'
 import { DomRef } from './components/ref/DomRef'
 import { MutableRef } from './components/ref/MutableRef'
+import { CounterClassLegacy } from './components/class/Counter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -72,6 +73,7 @@ function App() {
         </UserContextProvider>
         <DomRef />
         <MutableRef />
+        <CounterClassLegacy message="The count value is " />
       </div>
       <section id="center">
         <div className="hero">
