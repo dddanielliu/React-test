@@ -27,6 +27,7 @@ import { RandomNumber } from './components/restriction/RendomNumber'
 import { Toast } from './components/templateliterals/Toast'
 import { CustomButton } from './components/html/Button'
 import { CustomInput } from './components/html/Input'
+import { Text } from './components/polymorphic/Text'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -114,6 +115,9 @@ function App() {
         <Toast position='left-center' />
         <CustomButton variant='primary' onClick={() => console.log('Clicked')}>PrimaryButton</CustomButton>
         <CustomInput onChange={(event) => {console.log(event.target.value)}} />
+        <Text as='h1' size='lg'>Heading</Text>
+        <Text as='p' size='md'>Paragraph</Text>
+        <Text as='label' htmlFor='someId' size='sm' color='secondary'>Label</Text>
       </div>
       <section id="center">
         <div className="hero">
