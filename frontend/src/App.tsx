@@ -112,7 +112,7 @@ function App() {
         />
         <RandomNumber value={10} isPositive />
         <Toast position='left-center' />
-        <CustomButton variant='primary' onClick={() => console.log('Clicked')}><div>PrimaryButton</div></CustomButton>
+        <CustomButton variant='primary' onClick={() => console.log('Clicked')}>PrimaryButton</CustomButton>
         <CustomInput onChange={(event) => {console.log(event.target.value)}} />
       </div>
       <section id="center">
